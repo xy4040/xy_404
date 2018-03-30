@@ -12,6 +12,6 @@
 	--ignore-unmatch	即使没有匹配，也以零状态退出
 	----------------------------------------------------
 	我的操作如下：
-		git rm -r -cached '文件名' （git rm -r --cached 'b.txt'）
+		git rm -r --cached '文件名' （git rm -r --cached 'b.txt'）
 		git commit -m 'delete'
 		git push #再看github仓库发现b.txt已经没有了
