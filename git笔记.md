@@ -1,0 +1,17 @@
+1、删除github仓库上创建的分支
+	git push origin -d 分支名称
+	git push origin -d xing	#分支'xing'就删除了
+
+2、删除github仓库上单个文件和文件夹
+	用法：git rm 选项 文件
+	-n,--dry-run		演习
+	-q,--quiet		不列出删除的文件
+	--cached		只从索引区删除
+	-f,--forece		忽略文件更新状态检查
+	-r			允许递归删除
+	--ignore-unmatch	即使没有匹配，也以零状态退出
+	----------------------------------------------------
+	我的操作如下：
+		git rm -r -cached '文件名' （git rm -r --cached 'b.txt'）
+		git commit -m 'delete'
+		git push #再看github仓库发现b.txt已经没有了
