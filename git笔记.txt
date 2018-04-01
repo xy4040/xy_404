@@ -15,3 +15,6 @@
 		git rm -r --cached '文件名' （git rm -r --cached 'b.txt'）
 		git commit -m 'delete'
 		git push #再看github仓库发现b.txt已经没有了
+
+
+	\r\n
