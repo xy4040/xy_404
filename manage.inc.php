@@ -23,5 +23,3 @@ switch ($a) {
 		$tpl->display($m.'/'.$c);
 		break;
 }
-
-
