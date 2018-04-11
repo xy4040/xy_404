@@ -17,4 +17,12 @@
 		git push #再看github仓库发现b.txt已经没有了
 
 
-	
+3、git撤销操作
+	1）在本地修改了文件，还没有做git add的操作
+		git checkout -- 文件名
+		这样文件就可以恢复到修改之前了
+	2）在本地修改了文件，并且做了git add的操作，但还没有做git commit操作（撤销add到缓存区但还没有提交的操作）
+		git reset head 文件名
+		这样就把add的文件撤销到未add之前的状态了，如果再想把文件撤销到修改之前的状态，重复1）步骤。
+	3）撤销git commit提交的操作（本地文件修改 -> git add . -> git commit -m ''）
+		
