@@ -25,4 +25,8 @@
 		git reset head 文件名
 		这样就把add的文件撤销到未add之前的状态了，如果再想把文件撤销到修改之前的状态，重复1）步骤。
 	3）撤销git commit提交的操作（本地文件修改 -> git add . -> git commit -m ''）
-		
+		git reset --hard comitid | head^ （commitid是你commit提交后生成的id，或者用head^^^^来撤销，一个'^'表示回退一个版本）
+
+4、git log 和 git reflog的区别：
+	git log可以查看提交历史，以便你要退回到哪个版本
+	git reflog可以查看命令历史，以便确定你要回到哪个版本
