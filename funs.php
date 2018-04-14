@@ -50,6 +50,7 @@
 
 	// httpPost
 	function httpPost($data, $url){
+		$res = array();
 		// //初始化
 		$ch = curl_init();
 		// curl_setopt($ch,CURLOPT_SAFE_UPLOAD, false);
@@ -63,20 +64,19 @@
 		//要求结果为字符串且输出到屏幕上
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 		//post提交方式
-		$xml = $data;
+		// $xml = $data;
 		curl_setopt($ch, CURLOPT_POST, TRUE);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $xml);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 		//运行curl
-		$data = curl_exec($ch);
+		$res['data'] = curl_exec($ch);
 		//返回结果
-		if($data){
-			curl_close($ch);
-			return $data;
-		} else { 
-			$error = curl_errno($ch);
-			curl_close($ch);
-			return $error."---*";
+		if($res){
+			$res['error'] = true;
+		} else {
+			$res['error'] = false;
 		}
+		curl_close($ch);
+		return $res;
 	}
 
 	// httpPostSSL，用于微信红包（证书验证）
