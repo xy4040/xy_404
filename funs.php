@@ -206,4 +206,14 @@
 		$xml .= "</xml>";
 		return $xml;
 	}
+
+	// 随机生成中文
+	function RandomChinese($num = 1){
+		$str = '';
+		for($i = 0; $i < $num; $i++){
+			$random = chr(mt_rand(0xB0,0xD0)).chr(mt_rand(0xA1, 0xF0));
+			$str .= iconv('gb2312', 'utf-8', $random);
+		}
+		return $str;
+	}
 ?>
