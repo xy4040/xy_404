@@ -1,0 +1,15 @@
+*{ padding: 0; margin: 0; }
+
+.header{ width: 100%; text-align: center; }
+.header a{ background: #bbada0; font-size: 14px; display: block; height: 40px; line-height: 40px; color: #fff; text-decoration: none; width: 150px; margin: auto; border-radius: 5px; }
+.header a:hover{ background:  #bbada9}
+/*.header p{ margin: 20px 0; }*/
+
+
+.main{ width: 500px; background: #bbada0; height: 500px; margin: auto; position: relative; border-radius: 5px; }
+.main .box{ width: 100px; background: rgba(238, 228, 218, 0.35); height: 100px; position: absolute; top: 20px; left: 20px; border-radius: 5px; }
+.main .number{ position: absolute; border-radius: 5px; }
+.main .animate{ display: -none; -webkit-animation:toShow .2s forwards; font-size: 60px; text-align: center; line-height: 100px; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+@-webkit-keyframes toShow{
+	to { display: block; width: 100px; height: 100px; background: #eee4da; color: #000; }
+}
